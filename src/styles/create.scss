@@ -1,0 +1,109 @@
+@import '../golobals.scss';
+.create__wrapper{
+    position: absolute;
+    height:calc(100vh -70px) ;
+    background-image: linear-gradient(to right ,#ef9d00,#645e53,#ef9d00);
+    top:70px;
+    left:0;
+    right:0;
+    bottom: 0;
+    .create__layer{
+        height: 100%;
+        background-color: rgba(255,255,255,0.5);
+        width: 100%;
+        @include display(center);
+        .create__form{
+            padding:10px 30px 20px 30px;
+            width: 60%;
+            box-shadow: 1px 2px 12px rgba(black,.6);
+            border-radius: 10px;
+            .create__h1{
+                text-align: center;
+                color:#291b02;
+            }
+            .form__input{
+                padding:20px ;
+                background-color: #e2dbcd;
+                border-radius: 10px;
+                margin-top: 10px;
+                .form__body{
+                    display: flex;
+                .form__left{
+                    width: 50%;
+                    padding:20px;
+                    h1{
+                        .color{
+                            color:#ef9d00;
+                        }
+                    }
+                    .form__image-container{
+                        position: relative;
+                        margin-top: 30px;
+                        border:2px dashed #ef9d00;
+                        height: 280px;
+                        border-radius: 8px;
+                        .form__input{
+                            display: none;
+                        }
+                        .form__img{
+                            height: 100%;
+                            width: 100%;
+                            border-radius: 8px;
+                        }
+                        .btn-wrapper{
+                            display: flex;
+                            flex-direction: column;
+                            position: absolute;
+                            top: 50%;
+                            left:50%;
+                            transform:translate(-50%,-50%)
+                        }
+                    }
+                }
+                .form__right{
+                    width: 50%;
+                    padding:20px;
+                    .name__input{
+                        margin-top: 15px;
+                        display: flex;
+                        flex-direction: column;
+                        &.description{
+                            textarea{
+                                height: 135px;
+                                padding:10px;
+                                background-color: transparent;
+                                border: 1px solid #7e7e7d;
+                                border-radius:8px ;
+                                outline: none;
+                            }
+                        }
+                        label{
+                            margin-bottom: 5px;
+                        }
+                        input{
+                            outline: none;
+                            background-color: transparent;
+                            border: 1px solid #7e7e7d;
+                            height: 45px;
+                            border-radius: 5px;
+                            padding: 0px 12px 0px 10px;
+                            min-width: 0px;
+                        }
+                    }
+                }
+                }
+                .form__button{
+                   padding:15px 40px;
+                   margin-left: 50%;
+                   transform:translateX(-50%);
+                   outline:none ;
+                   cursor: pointer;
+                   border-radius: 5px;
+                   border: none;
+                   color:white;
+                   background-color: #00c904;
+                }
+            }
+        }
+    }
+}

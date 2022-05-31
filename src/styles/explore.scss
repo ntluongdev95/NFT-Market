@@ -1,0 +1,186 @@
+@import '../golobals.scss';
+.explore__wrapper{
+    position: absolute;
+    top:70px;
+    left:0;
+    right:0;
+    bottom: 0;
+    .explore__header{
+        .header__banner{
+            min-height: 120px;
+            height: 250px;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+            background-color: rgb(229, 232, 235);
+        }
+        .header__info{
+            height: 250px;
+            position: relative;
+            .image__logo{
+                height: 150px;
+                width: 150px;
+                position: absolute;
+                border-radius: 50%;
+                background-color: rgb(253, 250, 250);
+                left:50%;
+                top:-25%;
+                transform:translate(-50%,0%);
+                 @include display(center);
+                image{
+                    width: 150px;
+                    object-fit: contain;
+                }
+            }
+            .header__account{
+                @include display(center);
+                padding-top: 6%;
+                .account__name{
+                    font-size: 2rem;
+                    font-weight: bold;
+                }
+                .tick__icon{
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50%;
+                    @include display(center);
+                    background-color: #2281e2;
+                    margin-left: 10px;
+                }
+                
+            }
+            .account__btn{
+                margin: 10px auto;
+                @include display(center);
+                border:1px solid #eff2f3;
+                width: 150px;
+                padding:10px 20px;
+                border-radius: 25px;
+                .eth__logo{
+                    height: 20px;
+                    object-fit: contain;
+                    margin-right: 5px;
+                }
+                .account__number{
+                    color:#707a83;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+     .nft__list{
+        border:1px solid #e5e8eb;
+        display: flex;
+        .nft__left{
+            width: 5%;
+            height: 100%;
+            border-right:1px solid #e5e8eb ;
+        }
+        .nft__right{
+            padding:35px 35px;
+            width:95% ;
+            .nft__right-top{
+                @include display(none);
+                .nft__search{
+                    width: 45%;
+                    border: 1px solid #e5e8eb;
+                    height: 45px;
+                    padding:0 10px;
+                    border-radius: 10px;
+                    @include display(none);
+                    .nft__input{
+                        width: 95%;
+                        height: 100%;
+                        border:none;
+                        outline:none;
+                        margin-left: 10px;
+                    }
+                }
+                .nft__filter{
+                    width: 25%;
+                    margin-left: 20px;
+                    border: 1px solid #e5e8eb;
+                    height: 45px;
+                    padding:0 10px;
+                    border-radius: 10px;
+                    @include display(space-between);
+                    cursor: pointer;
+                    &:hover{
+                        box-shadow: 1px 2px 12px rgba(black,.1);
+                    }
+                }
+            }
+            .nft__grid{
+               margin-top: 40px;
+               display: grid;
+               column-gap: 10px;
+               row-gap: 20px;
+               margin-top: 20px;
+               grid-template-columns: repeat(4,1fr);
+               .nft__card{
+                   border:1px solid #e5e8eb;
+                   cursor: pointer;
+                   border-bottom-left-radius: 10px;
+                   border-bottom-right-radius: 10px;
+                   transition: .3s ease-in-out;
+                    &:hover{
+                       box-shadow: 1px 2px 9px rgba(0,0,0,.6);
+                       transform:translateY(-2px) ;
+                       .nft__buy{
+                        .buy__btn{
+                            opacity: 1;
+                        }
+                       } 
+                       }
+                    .image__container{
+                        width: 100%;
+                        height: 250px;
+                        .nft__image{
+                            width: 100%;
+                            height: 250px;
+                        }
+                    }
+                  .info__container{
+                    height: 88px;
+                    padding:10px;
+                    background-color: white;
+                  .nft__name{
+                      color:grey;
+                      margin-top: 10px;
+                  }
+                  .nft__info{
+                    @include display(space-between);
+                      .nft__price{
+                          @include display(none);
+                          img{
+                              height: 15px;
+                              object-fit: contain;
+                          }
+                      }
+                  }
+                }
+                  .nft__buy{
+                    @include display(space-between);
+                     font-weight: 500;
+                     padding: 12px;
+                     height: 42px;
+                      width: 100%;
+                     border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    background: linear-gradient(rgba(229, 232, 235, 0.392) 0%, rgb(255, 255, 255) 20%);
+                    .buy__btn{
+                       font-size: 1.2rem;
+                       color:#2281e2;
+                       opacity: 0;
+                    }
+                    .nft__fav{
+                        display: flex;
+                        align-items: center;
+                        color:#737d86;
+                    }
+                  }
+               }
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+@import '../golobals.scss';
+.bottom__wrapper{
+    margin-top: 40px;
+    padding:50px 150px;
+    color: rgb(255, 255, 255);
+    height: auto;
+    position: relative;
+    width: 100%;
+    background-color: rgb(24, 104, 183);
+    .bottom__header{
+       @include display(center);
+       .bottom__header-left{
+           h2{
+               text-align: center;
+           }
+           .bottom__p{
+               font-size: 1.2rem;
+               margin: 20px 0;
+               line-height: 30px;
+           }
+           .bottom__input{
+               width: 100%;
+               input{
+                   width: 60%;
+                   padding: 15px 10px;
+                   border-radius: 10px;
+                   border:none;
+                   outline: none;
+               }
+               .bottom__button{
+                   margin-left: 20px;
+                   padding: 12px 10px;
+                   width: 25%;
+                   color:white;
+                   font-size: 1.2rem;
+                   font-weight: bold;
+                   background-color: #2281e2;
+                   border-radius: 10px;
+                   border:none;
+                   outline: none;
+                   cursor: pointer;
+                   &:hover{
+                       background-color: #4393e4;
+                   }
+               }
+           }
+       }
+    }
+}

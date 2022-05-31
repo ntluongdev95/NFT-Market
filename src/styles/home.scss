@@ -1,0 +1,77 @@
+@import '../golobals.scss';
+.home{
+    position: absolute;
+    top:70px;
+    left:0;
+    right:0;
+    height: 700px;
+    background-size: cover;
+    background-position: center center;
+    background-image: url('https://lh3.googleusercontent.com/KhHIVlusXfzP1Ns65IsT6hpngYMLJzHQWj1BbvPHsxToWLWsmzrgQXB95flYTuve8xynAQW2X69YKsUKXEns30YOfGu9DcbR-XL_nH0=s250');
+    .home__layer{
+        height: 100%;
+        padding:20px 50px;
+        width: 100%;
+        @include display(none);
+        background-color: rgba(255,255,255,0.95);
+    .home__left{
+        width: 50%;
+        text-align: left;
+        .home__h1{
+            font-weight: 600;
+            font-size: 60px;
+            color:#ef9d00;
+            margin-bottom: 20px;
+        }
+        .home__span{
+            font-weight: 400;
+            font-size: 32px;
+            width: 70%;
+            line-height: 1.4;
+            color: rgb(112, 122, 131);
+        }
+        .home__buttons{
+            width: 60%;
+            @include display(none);
+            margin-top: 20px;
+            .home__button{
+                padding:15px 60px;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: .4s ease-in-out;
+                &.button1{
+                   margin-right: 15px;
+                   background-color:#2281e2 ;
+                   &:hover{
+                    background-color:#0351a0 ; 
+                   }
+                }
+                &.button2{
+                    background-color: #ef9d00;
+                    &:hover{
+                        box-shadow: 1px 2px 12px rgba(black ,.6); 
+                    }
+                 }
+                a{
+                    text-decoration: none;
+                    font-weight: bold;
+                    color:white;
+                }
+            }
+        }
+    }
+    .home__right{
+        width: 50%;
+        .home__image{
+            width: 100%;
+        }
+    }
+}
+}
+
+/*
+padding-left: 16px;
+    padding-right: 16px;
+    max-width: min(360px, 100% - 40px);
+    background-image: url(https://static.opensea.io/solana/home-banner.png)
+*/
